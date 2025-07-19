@@ -808,7 +808,7 @@ const SlideCreator = {
     const logo = SlideUtils.createElement("img", {
       className: "logo high-quality",
       src: `${serverAddress}/Items/${itemId}/Images/Logo?quality=40`,
-      alt: "logo",
+      alt: "",
       loading: "eager",
     });
 
@@ -870,9 +870,6 @@ const SlideCreator = {
       backdropContainer,
       gradientOverlay,
       featuredContent,
-      plotContainer,
-      infoContainer,
-      genreElement,
       buttonContainer
     );
 
