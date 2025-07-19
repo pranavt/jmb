@@ -540,7 +540,7 @@ const ApiUtils = {
       console.log("Fetching random items from server...");
 
       const response = await fetch(
-        `${STATE.jellyfinData.serverAddress}/Items?IncludeItemTypes=Movie,Series&Recursive=true&hasOverview=true&imageTypes=Primary&sortBy=PremiereDate&sortOrder=Descending&enableUserData=true&Limit=${CONFIG.maxItems}&fields=Id`,
+        `${STATE.jellyfinData.serverAddress}/Items?IncludeItemTypes=Movie,Series&Recursive=true&imageTypes=Primary&sortBy=PremiereDate&sortOrder=Descending&enableUserData=true&Limit=${CONFIG.maxItems}&fields=Id`,
         {
           headers: this.getAuthHeaders(),
         }
@@ -791,7 +791,7 @@ const SlideCreator = {
 
     const backdrop = SlideUtils.createElement("img", {
       className: "backdrop high-quality",
-      src: `${serverAddress}/Items/${itemId}/Images/Backdrop/0?quality=60`,
+      src: `${serverAddress}/Items/${itemId}/Images/Primary/0?quality=60`,
       alt: "Backdrop",
       loading: "eager",
     });
